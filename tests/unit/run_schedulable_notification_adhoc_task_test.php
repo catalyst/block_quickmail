@@ -39,6 +39,7 @@ class block_quickmail_run_schedulable_notification_adhoc_task_testcase extends a
         sends_messages;
 
     public function test_runs_scheduled_via_adhoc_task() {
+        $this->markTestSkipped('must be revisited.');
         // Reset all changes automatically after this test.
         $this->resetAfterTest(true);
 
