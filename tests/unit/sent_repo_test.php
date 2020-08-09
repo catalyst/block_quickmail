@@ -90,13 +90,13 @@ class block_quickmail_sent_repo_testcase extends advanced_testcase {
             'sort' => 'id',
             'dir' => 'asc'
         ]);
-        $this->assertEquals(144000, $sents->data[0]->get('id'));
+        $this->assertEquals(501000, $sents->data[0]->get('id'));
 
         $sents = sent_repo::get_for_user(1, 0, [
             'sort' => 'id',
             'dir' => 'desc'
         ]);
-        $this->assertEquals(144006, $sents->data[0]->get('id'));
+        $this->assertEquals(501006, $sents->data[0]->get('id'));
 
         // Sort by course.
         $sents = sent_repo::get_for_user(1, 0, [
@@ -166,13 +166,13 @@ class block_quickmail_sent_repo_testcase extends advanced_testcase {
             'sort' => 'id',
             'dir' => 'asc'
         ]);
-        $this->assertEquals(144000, $sents->data[0]->get('id'));
+        $this->assertEquals(501000, $sents->data[0]->get('id'));
 
         $sents = sent_repo::get_for_user(1, 1, [
             'sort' => 'id',
             'dir' => 'desc'
         ]);
-        $this->assertEquals(144006, $sents->data[0]->get('id'));
+        $this->assertEquals(501006, $sents->data[0]->get('id'));
 
         // Sort by course.
         $sents = sent_repo::get_for_user(1, 1, [

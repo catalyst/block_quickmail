@@ -67,10 +67,10 @@ class block_quickmail_signature_persistent_testcase extends advanced_testcase {
         ]);
 
         // Refresh the first signature.
-        $signature1->read();
+        $signature2->read();
 
-        $this->assertTrue($signature2->is_default());
-        $this->assertFalse($signature1->is_default());
+        $this->assertFalse($signature2->is_default());
+        $this->assertTrue($signature1->is_default());
     }
 
     public function test_makes_another_signature_default_when_default_is_deleted() {

@@ -104,7 +104,7 @@ class block_quickmail_schedule_persistent_testcase extends advanced_testcase {
             'unit' => 'week',
             'amount' => 1,
             'begin_at' => $now,
-            'end_at' => $this->get_future_time(),
+            'end_at' => $now + 604800, // Update the end time to actually be in the future.
         ]);
 
         $nextruntime = $schedule->calculate_next_time_from($now);

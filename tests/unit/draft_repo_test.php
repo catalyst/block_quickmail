@@ -164,13 +164,13 @@ class block_quickmail_draft_repo_testcase extends advanced_testcase {
             'sort' => 'id',
             'dir' => 'asc'
         ]);
-        $this->assertEquals(144000, $drafts->data[0]->get('id'));
+        $this->assertEquals(501000, $drafts->data[0]->get('id'));
 
         $drafts = draft_repo::get_for_user(1, 0, [
             'sort' => 'id',
             'dir' => 'desc'
         ]);
-        $this->assertEquals(144006, $drafts->data[0]->get('id'));
+        $this->assertEquals(501006, $drafts->data[0]->get('id'));
 
         // Sort by course.
         $drafts = draft_repo::get_for_user(1, 0, [
@@ -240,13 +240,13 @@ class block_quickmail_draft_repo_testcase extends advanced_testcase {
             'sort' => 'id',
             'dir' => 'asc'
         ]);
-        $this->assertEquals(144000, $drafts->data[0]->get('id'));
+        $this->assertEquals(501000, $drafts->data[0]->get('id'));
 
         $drafts = draft_repo::get_for_user(1, 1, [
             'sort' => 'id',
             'dir' => 'desc'
         ]);
-        $this->assertEquals(144006, $drafts->data[0]->get('id'));
+        $this->assertEquals(501006, $drafts->data[0]->get('id'));
 
         // Sort by course.
         $drafts = draft_repo::get_for_user(1, 1, [

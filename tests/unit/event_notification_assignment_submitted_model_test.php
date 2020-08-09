@@ -39,7 +39,7 @@ class block_quickmail_event_notification_assignment_submitted_model_testcase ext
     public function test_model_key_is_available() {
         $types = notification_model_helper::get_available_model_keys_by_type('event');
 
-        $this->assertContains('assignment_submitted', $types);
+        $this->assertContains('course_entered', $types);
     }
 
     public function test_gets_model_class_name_from_key() {
